@@ -1,21 +1,20 @@
 defmodule AppWeb.MixProject do
   use Mix.Project
 
-  @version File.read!("../../version.txt")
-
   def project do
     [
       app: :app_web,
-      version: @version,
+      version: Mix.Shared.version(),
       build_path: "../../_build",
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.14",
-      elixirc_paths: elixirc_paths(Mix.env()),
+      elixir: Mix.Shared.elixir(),
+      elixirc_paths: Mix.Shared.elixirc_paths(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: Mix.Shared.test_coverage()
     ]
   end
 
@@ -28,10 +27,6 @@ defmodule AppWeb.MixProject do
       extra_applications: [:logger, :runtime_tools]
     ]
   end
-
-  # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
   #

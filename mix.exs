@@ -1,14 +1,17 @@
+# NOTE: Load shared configuration
+Code.require_file("mix/shared.exs")
+
 defmodule Myumbrella.MixProject do
   use Mix.Project
 
-  @version File.read!("version.txt")
-
   def project do
     [
+      name: "Myumbrella",
       apps_path: "apps",
-      version: @version,
+      version: Mix.Shared.version(),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      test_coverage: Mix.Shared.test_coverage(),
       releases: [
         myumbrella: [
           applications: [

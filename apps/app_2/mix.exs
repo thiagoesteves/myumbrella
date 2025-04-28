@@ -1,19 +1,19 @@
 defmodule App2.MixProject do
   use Mix.Project
 
-  @version File.read!("../../version.txt")
-
   def project do
     [
       app: :app_2,
-      version: @version,
+      version: Mix.Shared.version(),
       build_path: "../../_build",
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.16",
+      elixir: Mix.Shared.elixir(),
+      elixirc_paths: Mix.Shared.elixirc_paths(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      test_coverage: Mix.Shared.test_coverage()
     ]
   end
 
