@@ -27,7 +27,7 @@ defmodule App2.Worker do
   def handle_info(:schedule, state) do
     schedule_new_deployment(state.interval)
 
-    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) 🔥")
+    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) 🔥 (╯°□°)╯ ##### ")
 
     {:noreply, state}
   end
