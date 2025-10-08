@@ -6,13 +6,6 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 # config :app_web, AppWebWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
-config :app_web, AppWebWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$"
-    ]
-  ]
 
 # Do not print debug messages in production
 config :logger, level: :info
