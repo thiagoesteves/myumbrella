@@ -1,5 +1,5 @@
 defmodule Mix.Shared do
-  def version, do: "0.2.6"
+  def version, do: "0.3.0"
 
   def elixir, do: "~> 1.16"
 

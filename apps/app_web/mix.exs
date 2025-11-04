@@ -56,7 +56,7 @@ defmodule AppWeb.MixProject do
       {:bandit, "~> 1.5"},
 
       # Add Observer
-      {:observer_web, "~> 0.1.0"},
+      {:observer_web, "~> 0.2.0"},
 
       # Add dependencies on your other apps
       {:app_1, in_umbrella: true},
