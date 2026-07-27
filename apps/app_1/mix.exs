@@ -20,7 +20,7 @@ defmodule App1.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :observer, :mnesia],
       mod: {App1.Application, []}
     ]
   end
