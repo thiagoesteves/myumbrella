@@ -32,5 +32,5 @@ MIX_ENV=prod mix release
 
 If using Observer Web, install it in only one app (recommended: the LiveView web app).
 
-[dye]: https://github.com/thiagoesteves/deployex
+[dye]: https://github.com/deployex/deployex
 
